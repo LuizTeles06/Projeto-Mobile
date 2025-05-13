@@ -38,14 +38,14 @@ export default function DashboardScreen() {
           
           <View style={styles.statsContainer}>
             <StatsCard 
-              title="Total Users" 
+              title="Usuários" 
               value="12,592" 
               change={+12.3}
               iconName="users"
               color="#3B82F6" 
             />
             <StatsCard 
-              title="Revenue" 
+              title="Receita" 
               value="$42,853" 
               change={+8.1}
               iconName="dollar-sign" 
@@ -55,14 +55,14 @@ export default function DashboardScreen() {
           
           <View style={styles.statsContainer}>
             <StatsCard 
-              title="Tasks" 
+              title="Tarefas" 
               value="248" 
               change={-2.5}
               iconName="check-square" 
               color="#9333EA"
             />
             <StatsCard 
-              title="Completion" 
+              title="Realizadas" 
               value="86%" 
               change={+4.6}
               iconName="pie-chart" 

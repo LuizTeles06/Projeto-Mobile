@@ -18,39 +18,39 @@ const activities: Activity[] = [
   {
     id: '1',
     type: 'task',
-    title: 'Website Redesign',
-    description: 'Homepage design completed',
-    time: '2h ago',
+    title: 'Redesign do Site',
+    description: 'Design da homepage concluído',
+    time: 'há 2h',
     status: 'completed',
   },
   {
     id: '2',
     type: 'user',
-    title: 'New User',
-    description: 'John Smith joined',
-    time: '3h ago',
+    title: 'Novo Usuário',
+    description: 'João Silva entrou',
+    time: 'há 3h',
   },
   {
     id: '3',
     type: 'sale',
-    title: 'New Sale',
-    description: 'Premium plan purchased',
-    time: '5h ago',
+    title: 'Nova Venda',
+    description: 'Plano premium adquirido',
+    time: 'há 5h',
   },
   {
     id: '4',
     type: 'task',
-    title: 'API Integration',
-    description: 'Failed to connect to server',
-    time: '1d ago',
+    title: 'Integração com API',
+    description: 'Falha ao conectar ao servidor',
+    time: 'há 1 dia',
     status: 'failed',
   },
   {
     id: '5',
     type: 'alert',
-    title: 'System Alert',
-    description: 'Storage 85% full',
-    time: '1d ago',
+    title: 'Alerta do Sistema',
+    description: 'Armazenamento 85% cheio',
+    time: 'há 1 dia',
   },
 ];
 
@@ -116,7 +116,7 @@ export function ActivityCard() {
   return (
     <View style={[styles.container, isDark && styles.containerDark]}>
       <View style={styles.header}>
-        <Text style={[styles.title, isDark && styles.titleDark]}>Recent Activity</Text>
+        <Text style={[styles.title, isDark && styles.titleDark]}>Atividades Recentes</Text>
       </View>
       
       <FlatList

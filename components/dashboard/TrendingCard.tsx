@@ -8,7 +8,7 @@ export function TrendingCard() {
   const isDark = colorScheme === 'dark';
   
   const data = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
     datasets: [
       {
         data: [20, 45, 28, 80, 99, 43],
@@ -16,7 +16,7 @@ export function TrendingCard() {
         strokeWidth: 2,
       },
     ],
-    legend: ['Revenue Trend'],
+    legend: ['Tendência de Receita'],
   };
   
   const chartConfig = {
@@ -41,8 +41,8 @@ export function TrendingCard() {
   return (
     <View style={[styles.container, isDark && styles.containerDark]}>
       <View style={styles.header}>
-        <Text style={[styles.title, isDark && styles.titleDark]}>Revenue Trend</Text>
-        <Text style={[styles.subtitle, isDark && styles.subtitleDark]}>Last 6 Months</Text>
+        <Text style={[styles.title, isDark && styles.titleDark]}>Tendência de Receita</Text>
+        <Text style={[styles.subtitle, isDark && styles.subtitleDark]}>Últimos 6 meses</Text>
       </View>
       
       <LineChart

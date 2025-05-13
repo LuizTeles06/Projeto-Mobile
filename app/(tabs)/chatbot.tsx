@@ -13,26 +13,26 @@ type Message = {
   timestamp: Date;
 };
 
-// Mock responses for the chatbot
+// Respostas simuladas para o chatbot
 const getBotResponse = (message: string): string => {
   const lowerMessage = message.toLowerCase();
   
   if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
-    return "Hello! How can I assist you today with your analytics or dashboard?";
+    return "Olá! Como posso te ajudar hoje com seus dados ou painel?";
   } else if (lowerMessage.includes('dashboard')) {
-    return "Your dashboard shows key metrics like user growth, revenue, tasks, and completion rates. You can view more details in the Analytics section.";
+    return "Seu painel exibe métricas importantes como crescimento de usuários, receita, tarefas e taxas de conclusão. Você pode ver mais detalhes na seção de Análises.";
   } else if (lowerMessage.includes('chart') || lowerMessage.includes('graph')) {
-    return "The Analytics section provides various charts including line charts, bar charts, and pie charts. You can switch between them and change the time frame to see different patterns in your data.";
+    return "A seção de Análises oferece vários gráficos, incluindo linhas, barras e pizza. Você pode alternar entre eles e mudar o período para ver padrões diferentes nos seus dados.";
   } else if (lowerMessage.includes('revenue') || lowerMessage.includes('sales')) {
-    return "Your current revenue is $42,853, which is up 8.1% compared to the previous period. Keep up the good work!";
+    return "Sua receita atual é de R$ 42.853, com um aumento de 8,1% em relação ao período anterior. Continue assim!";
   } else if (lowerMessage.includes('user') || lowerMessage.includes('customer')) {
-    return "You have 12,592 total users, with a growth rate of 12.3% compared to the last period. Most of your users are active on weekdays.";
+    return "Você tem 12.592 usuários no total, com uma taxa de crescimento de 12,3% em relação ao último período. A maioria dos seus usuários está ativa nos dias de semana.";
   } else if (lowerMessage.includes('help') || lowerMessage.includes('support')) {
-    return "I'm here to help! You can ask me about your dashboard metrics, chart data, or how to use this application. What specific information are you looking for?";
+    return "Estou aqui para ajudar! Você pode me perguntar sobre métricas do painel, dados de gráficos ou como usar este aplicativo. Que informação específica você está procurando?";
   } else if (lowerMessage.includes('thank')) {
-    return "You're welcome! If you have any more questions, feel free to ask.";
+    return "De nada! Se tiver mais perguntas, é só me chamar.";
   } else {
-    return "I'm not sure I understand. Could you rephrase your question about your analytics, dashboard, or charts?";
+    return "Não entendi bem. Você pode reformular sua pergunta sobre dados, painel ou gráficos?";
   }
 };
 
@@ -43,7 +43,7 @@ export default function ChatbotScreen() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Hello! I'm your analytics assistant. How can I help you today?",
+      text: "Olá! Sou seu assistente de dados. Como posso te ajudar hoje?",
       sender: 'bot',
       timestamp: new Date(),
     },
@@ -174,6 +174,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#3B82F6',
     justifyContent: 'center',
     alignItems: 'center',
-    marginLeft: 8,
+    marginLeft: 8,  
   },
 });

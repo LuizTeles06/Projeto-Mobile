@@ -57,11 +57,12 @@ export function StatsCard({ title, value, change, iconName, color }: StatsCardPr
             {change >= 0 ? '+' : ''}{change}%
           </Text>
         </View>
-        <Text style={[styles.period, isDark && styles.periodDark]}>vs last period</Text>
+        <Text style={[styles.period, isDark && styles.periodDark]}>{change >= 0 ? 'Aumentou' : 'Diminuiu'}</Text>
       </View>
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {

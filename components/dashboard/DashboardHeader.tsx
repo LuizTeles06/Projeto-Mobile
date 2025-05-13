@@ -6,7 +6,7 @@ interface DashboardHeaderProps {
   userName?: string;
 }
 
-export function DashboardHeader({ userName = 'User' }: DashboardHeaderProps) {
+export function DashboardHeader({ userName = 'Usuário' }: DashboardHeaderProps) {
   const colorScheme = useColorScheme();
   const isDark = colorScheme === 'dark';
   
@@ -14,11 +14,11 @@ export function DashboardHeader({ userName = 'User' }: DashboardHeaderProps) {
     const currentHour = new Date().getHours();
     
     if (currentHour < 12) {
-      return 'Good morning';
+      return 'Bom dia';
     } else if (currentHour < 18) {
-      return 'Good afternoon';
+      return 'Boa tarde';
     } else {
-      return 'Good evening';
+      return 'Boa noite';
     }
   };
   
@@ -29,15 +29,16 @@ export function DashboardHeader({ userName = 'User' }: DashboardHeaderProps) {
           {getCurrentGreeting()},
         </Text>
         <Text style={[styles.name, isDark && styles.nameDark]}>
-          {userName || 'User'}
+          {userName || 'Usuário'}
         </Text>
       </View>
       <Text style={[styles.subtitle, isDark && styles.subtitleDark]}>
-        Here's your performance overview
+        Aqui está o resumo da sua performance
       </Text>
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
